@@ -11,7 +11,8 @@ var app = express();
 
 // mongoose connection setup
 const mongoose = require('mongoose');
-const mongoDB = 'mongodb+srv://maruxan:marutest@cluster0.vbq27.gcp.mongodb.net/local_library?retryWrites=true&w=majority';
+const connectionString = require('./connection-string'); // imported string
+const mongoDB = connectionString;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error'));
