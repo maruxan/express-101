@@ -21,12 +21,12 @@ exports.author_create_post = (req, res) => {
 };
 
 // Display Author delete form on GET
-exports.auhtor_delete_get = (req, res) => {
+exports.author_delete_get = (req, res) => {
   res.send('NOT IMPLEMENTED: Author delete GET');
 };
 
 // Handle Author delete on POST
-exports.auhtor_delete_post = (req, res) => {
+exports.author_delete_post = (req, res) => {
   res.send('NOT IMPLEMENTED: Author delete POST');
 };
 
@@ -36,6 +36,6 @@ exports.author_update_get = (req, res) => {
 };
 
 // Handle Author update on POST
-exports.auhtor_update_post = (req, res) => {
+exports.author_update_post = (req, res) => {
   res.send('NOT IMPLEMENTED: Author update POST');
 };
