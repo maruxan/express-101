@@ -11,8 +11,8 @@ const BookeSchema = new Schema({
 });
 
 // Virtual for book's URL
-BookeSchema.virtual('url').get(() => {
-  '/catalog/book/' + this._id;
+BookeSchema.virtual('url').get(function () {
+  return '/catalog/book/' + this._id;
 });
 
 // Export model

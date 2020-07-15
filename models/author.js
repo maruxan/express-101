@@ -10,7 +10,7 @@ const AuthorSchema = new Schema({
 });
 
 // Virtual for author's full name
-AuthorSchema.virtual('name').get(() => {
+AuthorSchema.virtual('name').get(function () {
   // Handling lack of names
   let fullname = '';
   if (this.first_name && this.family_name) {
@@ -24,13 +24,13 @@ AuthorSchema.virtual('name').get(() => {
 });
 
 // Virtual for author's lifespan
-AuthorSchema.virtual('lifespan').get(() => {
-  (this.date_of_death.getYear() - this.date_of_birth.getYear()).toString();
+AuthorSchema.virtual('lifespan').get(function () {
+  return (this.date_of_death.getYear() - this.date_of_birth.getYear()).toString();
 });
 
 // Virtual for author's URL
-AuthorSchema.virtual('url').get(() => {
-  '/catalog/author/' + this._id;
+AuthorSchema.virtual('url').get(function () {
+  return '/catalog/author/' + this._id;
 });
 
 // Export model
